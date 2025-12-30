@@ -1,62 +1,78 @@
-// Variables globales
-let current = 0;
-let score = 0;
-let selectedAnswer = null;
+function startQuiz(questions) {
+  let current = 0;
+  let score = 0;
+  let selectedAnswer = null;
 
-// Récupération des éléments du DOM
-const questionEl = document.getElementById("question");
-const optionsEl = document.getElementById("options");
-const validateBtn = document.getElementById("validateBtn");
-const scoreEl = document.getElementById("score");
-const counterEl = document.getElementById("counter");
+  const questionEl = document.getElementById("question");
+  const optionsEl = document.getElementById("options");
+  const validateBtn = document.getElementById("validateBtn");
+  const scoreEl = document.getElementById("score");
+  const counterEl = document.getElementById("counter");
 
-// Fonction pour afficher la question
-function loadQuestion() {
+  // Affiche une question
+  function loadQuestion() {
     counterEl.textContent = `${current + 1} / ${questions.length}`;
+    const q = questions[current];
+    questionEl.textContent = q.question;
+    optionsEl.innerHTML = "";
 
-  const q = questions[current];
-  questionEl.textContent = q.question;
-  optionsEl.innerHTML = "";
+    q.answers.forEach((answer, index) => {
+      const option = document.createElement("div");
+      option.textContent = answer;
+      option.className = "option-card";
 
-  q.answers.forEach((answer, index) => {
-    const option = document.createElement("div");
-    option.textContent = answer;
-    option.className = "option-card"; // classe CSS
+      option.onclick = () => {
+        selectedAnswer = index;
+        [...optionsEl.children].forEach(o => o.classList.remove("selected"));
+        option.classList.add("selected");
+      };
 
-    option.onclick = () => {
-      selectedAnswer = index;
+      optionsEl.appendChild(option);
+    });
+  }
 
-      // retirer "selected" de toutes les options
-      Array.from(optionsEl.children).forEach(b => b.classList.remove("selected"));
+  // Validation de la réponse
+  validateBtn.onclick = () => {
+    if (selectedAnswer === null) {
+      alert("Sélectionne une réponse !");
+      return;
+    }
 
-      // ajouter "selected" à l'option cliquée
-      option.classList.add("selected");
-    };
+    if (selectedAnswer === questions[current].correct) score++;
+    current++;
+    selectedAnswer = null;
 
-    optionsEl.appendChild(option);
-  });
+    if (current < questions.length) {
+      loadQuestion();
+    } else {
+      questionEl.textContent = "Quiz terminé !";
+      optionsEl.innerHTML = "";
+      validateBtn.style.display = "none";
+      scoreEl.textContent = `Score : ${score} / ${questions.length}`;
+    }
+  };
+
+  loadQuestion();
 }
 
-// Validation de la réponse
-validateBtn.onclick = () => {
-  if (selectedAnswer === null) {
-    alert("Sélectionne une réponse !");
-    return;
+// --- Charger le quiz selon le thème choisi ---
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const theme = params.get("theme");
+  let selectedQuiz;
+
+  switch(theme) {
+    case "geographie":
+      selectedQuiz = quizGeographie; break;
+    case "histoire":
+      selectedQuiz = quizHistoire; break;
+    case "politique":
+      selectedQuiz = quizPolitique; break;
+    case "sport":
+      selectedQuiz = quizSport; break;
+    default:
+      selectedQuiz = quizGeographie; // par défaut
   }
 
-  if (selectedAnswer === questions[current].correct) score++;
-  current++;
-  selectedAnswer = null;
-
-  if (current < questions.length) {
-    loadQuestion();
-  } else {
-    questionEl.textContent = "Quiz terminé !";
-    optionsEl.innerHTML = "";
-    validateBtn.style.display = "none";
-    scoreEl.textContent = `Score : ${score} / ${questions.length}`;
-  }
-};
-
-// Charger la première question
-loadQuestion();
+  startQuiz(selectedQuiz);
+});

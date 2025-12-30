@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   buttons.forEach(button => {
     button.addEventListener("click", () => {
-      const theme = button.dataset.theme; // récupère le thème
+      const theme = button.dataset.theme; 
       console.log("Thème choisi :", theme);
 
-      // Redirige vers index.html et passe le thème en paramètre dans l'URL
+      // Redirection vers index.html avec le thème choisi
       window.location.href = `index.html?theme=${theme}`;
     });
   });
