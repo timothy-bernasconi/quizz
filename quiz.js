@@ -1,78 +1,68 @@
-function startQuiz(questions) {
-  let current = 0;
-  let score = 0;
-  let selectedAnswer = null;
+const params = new URLSearchParams(window.location.search);
+const theme = params.get("theme");
 
-  const questionEl = document.getElementById("question");
-  const optionsEl = document.getElementById("options");
-  const validateBtn = document.getElementById("validateBtn");
-  const scoreEl = document.getElementById("score");
-  const counterEl = document.getElementById("counter");
-
-  // Affiche une question
-  function loadQuestion() {
-    counterEl.textContent = `${current + 1} / ${questions.length}`;
-    const q = questions[current];
-    questionEl.textContent = q.question;
-    optionsEl.innerHTML = "";
-
-    q.answers.forEach((answer, index) => {
-      const option = document.createElement("div");
-      option.textContent = answer;
-      option.className = "option-card";
-
-      option.onclick = () => {
-        selectedAnswer = index;
-        [...optionsEl.children].forEach(o => o.classList.remove("selected"));
-        option.classList.add("selected");
-      };
-
-      optionsEl.appendChild(option);
-    });
-  }
-
-  // Validation de la réponse
-  validateBtn.onclick = () => {
-    if (selectedAnswer === null) {
-      alert("Sélectionne une réponse !");
-      return;
-    }
-
-    if (selectedAnswer === questions[current].correct) score++;
-    current++;
-    selectedAnswer = null;
-
-    if (current < questions.length) {
-      loadQuestion();
-    } else {
-      questionEl.textContent = "Quiz terminé !";
-      optionsEl.innerHTML = "";
-      validateBtn.style.display = "none";
-      scoreEl.textContent = `Score : ${score} / ${questions.length}`;
-    }
-  };
-
-  loadQuestion();
+if (!theme || !quizzes[theme]) {
+  alert("Thème invalide");
+  window.location.href = "themes.html";
 }
 
-// --- Charger le quiz selon le thème choisi ---
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const theme = params.get("theme");
-  let selectedQuiz;
+const selectedQuiz = quizzes[theme];
+let currentQuestionIndex = 0;
+let selectedAnswerIndex = null;
+let userAnswers = [];
 
-  switch(theme) {
-    case "geographie":
-      selectedQuiz = quizGeographie; break;
-    case "histoire":
-      selectedQuiz = quizHistoire; break;
-    case "politique":
-      selectedQuiz = quizPolitique; break;
-    case "sport":
-      selectedQuiz = quizSport; break;
-    default:
-      selectedQuiz = quizGeographie; // par défaut
+const questionEl = document.getElementById("question");
+const optionsEl = document.getElementById("options");
+const counterEl = document.getElementById("counter");
+const validateBtn = document.getElementById("validateBtn");
+
+function showQuestion() {
+  selectedAnswerIndex = null;
+  optionsEl.innerHTML = "";
+
+  const q = selectedQuiz[currentQuestionIndex];
+
+  counterEl.textContent = `Question ${currentQuestionIndex + 1} / ${selectedQuiz.length}`;
+  questionEl.textContent = q.question;
+
+  q.answers.forEach((answer, index) => {
+    const div = document.createElement("div");
+    div.classList.add("option-card");
+    div.textContent = answer;
+
+    div.addEventListener("click", () => {
+      document.querySelectorAll(".option-card")
+        .forEach(el => el.classList.remove("selected"));
+
+      div.classList.add("selected");
+      selectedAnswerIndex = index;
+    });
+
+    optionsEl.appendChild(div);
+  });
+}
+
+validateBtn.addEventListener("click", () => {
+  if (selectedAnswerIndex === null) {
+    alert("Choisis une réponse !");
+    return;
   }
 
-  startQuiz(selectedQuiz);
+  userAnswers.push(selectedAnswerIndex);
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < selectedQuiz.length) {
+    showQuestion();
+  } else {
+    localStorage.setItem("quizResults", JSON.stringify({
+      theme,
+      questions: selectedQuiz,
+      userAnswers
+    }));
+
+    window.location.href = "resultats.html";
+  }
 });
+
+
+showQuestion();

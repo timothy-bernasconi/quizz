@@ -32,7 +32,7 @@ const quizGeographie = [
   {
     question: "Quel pays possède le plus d’habitants ?",
     answers: ["Inde", "États-Unis", "Chine", "Indonésie"],
-    correct: 2
+    correct: 0
   },
   {
     question: "Quel est le plus haut sommet du monde ?",
@@ -94,9 +94,9 @@ const quizHistoire = [
     correct: 1
   },
   {
-    question: "Dans quelle ville s’est déroulée la bataille de Waterloo ?",
-    answers: ["Paris", "Bruxelles", "Waterloo", "Madrid"],
-    correct: 2
+    question: "Dans quel pays s’est déroulé la bataille de Waterloo ?",
+    answers: ["France", "Belgique", "Angleterre", "Espagne"],
+    correct: 1
   },
   {
     question: "Quel mur symbolisait la division de l’Allemagne ?",
@@ -144,7 +144,7 @@ const quizPolitique = [
   },
   {
     question: "Quel est le pouvoir législatif ?",
-    answers: ["Faire respecter les lois", "Créer les lois", "Jugement des crimes", "Exécuter les lois"],
+    answers: ["Faire respecter les lois", "Voter les lois", "Jugement des crimes", "Exécuter les lois"],
     correct: 1
   },
   {
@@ -192,7 +192,7 @@ const quizSport = [
     correct: 1
   },
   {
-    question: "Combien de sets se jouent généralement au tennis grand chelem chez les hommes ?",
+    question: "Quel est le nombre maximum de sets que l'on peut jouer au tennis en grand chelem chez les hommes ?",
     answers: ["2", "3", "4", "5"],
     correct: 3
   },
@@ -213,3 +213,117 @@ const quizSport = [
   }
 ];
 
+const quizLitterature = [
+  {
+    question: "Qui a écrit « Les Misérables » ?",
+    answers: ["Émile Zola", "Victor Hugo", "Honoré de Balzac", "Gustave Flaubert"],
+    correct: 1
+  },
+  {
+    question: "Quel est l’auteur de « L’Étranger » ?",
+    answers: ["Albert Camus", "Jean-Paul Sartre", "André Malraux", "Raymond Queneau"],
+    correct: 0
+  },
+  {
+    question: "Dans quel pays est né William Shakespeare ?",
+    answers: ["France", "Irlande", "Angleterre", "Écosse"],
+    correct: 2
+  },
+  {
+    question: "Quel roman commence par « Longtemps, je me suis couché de bonne heure » ?",
+    answers: ["Madame Bovary", "À la recherche du temps perdu", "Le Rouge et le Noir", "Germinal"],
+    correct: 1
+  },
+  {
+    question: "Qui a écrit « 1984 » ?",
+    answers: ["Aldous Huxley", "George Orwell", "Ray Bradbury", "Philip K. Dick"],
+    correct: 1
+  },
+  {
+    question: "Quel est le genre littéraire de « Roméo et Juliette » ?",
+    answers: ["Roman", "Comédie", "Tragédie", "Essai"],
+    correct: 2
+  },
+  {
+    question: "Quel écrivain est associé au mouvement du naturalisme ?",
+    answers: ["Victor Hugo", "Émile Zola", "Arthur Rimbaud", "Paul Verlaine"],
+    correct: 1
+  },
+  {
+    question: "Quel auteur a créé le personnage de Sherlock Holmes ?",
+    answers: ["Agatha Christie", "Arthur Conan Doyle", "Edgar Allan Poe", "Jules Verne"],
+    correct: 1
+  },
+  {
+    question: "« Le Petit Prince » a été écrit par :",
+    answers: ["Jean de La Fontaine", "Antoine de Saint-Exupéry", "Marcel Pagnol", "Albert Camus"],
+    correct: 1
+  },
+  {
+    question: "Quel livre raconte l’histoire de Jean Valjean ?",
+    answers: ["Germinal", "Les Misérables", "Bel-Ami", "Le Père Goriot"],
+    correct: 1
+  }
+];
+
+const quizCinema = [
+  {
+    question: "Qui a réalisé le film « Titanic » ?",
+    answers: ["Steven Spielberg", "James Cameron", "Christopher Nolan", "Ridley Scott"],
+    correct: 1
+  },
+  {
+    question: "Quel acteur incarne Jack Sparrow ?",
+    answers: ["Orlando Bloom", "Johnny Depp", "Leonardo DiCaprio", "Brad Pitt"],
+    correct: 1
+  },
+  {
+    question: "Quel film a remporté l’Oscar du meilleur film en 2020 ?",
+    answers: ["1917", "Joker", "Parasite", "Once Upon a Time in Hollywood"],
+    correct: 2
+  },
+  {
+    question: "Dans quel film trouve-t-on le personnage Dark Vador ?",
+    answers: ["Star Trek", "Star Wars", "Dune", "Avatar"],
+    correct: 1
+  },
+  {
+    question: "Quel est le genre du film « Le Seigneur des Anneaux » ?",
+    answers: ["Science-fiction", "Fantastique", "Historique", "Thriller"],
+    correct: 1
+  },
+  {
+    question: "Quel acteur joue Neo dans « Matrix » ?",
+    answers: ["Tom Cruise", "Keanu Reeves", "Will Smith", "Brad Pitt"],
+    correct: 1
+  },
+  {
+    question: "Quel film d’animation met en scène un ogre vert ?",
+    answers: ["Monstres & Cie", "Toy Story", "Shrek", "Kung Fu Panda"],
+    correct: 2
+  },
+  {
+    question: "Quel réalisateur est connu pour le film « Inception » ?",
+    answers: ["Martin Scorsese", "Tim Burton", "Denis Villeneuve", "Christopher Nolan"],
+    correct: 1
+  },
+  {
+    question: "Quel film commence par « Il était une fois dans une galaxie lointaine… » ?",
+    answers: ["Avatar", "Star Wars", "Dune", "Interstellar"],
+    correct: 1
+  },
+  {
+    question: "Dans quel pays se déroule principalement le film « Amélie Poulain » ?",
+    answers: ["Belgique", "Canada", "France", "Italie"],
+    correct: 2
+  }
+];
+
+const quizzes = {
+  geographie: quizGeographie,
+  histoire: quizHistoire,
+  sport: quizSport,
+  politique: quizPolitique,
+  litterature: quizLitterature,
+  cinema: quizCinema
+};
