@@ -268,7 +268,7 @@ const quizLitterature = [
 
 const quizCinema = [
   {
-    question: "Qui a réalisé le film « Titanic » ?",
+    question: "Qui a réalisé le film 'Titanic' ?",
     answers: ["Steven Spielberg", "James Cameron", "Christopher Nolan", "Ridley Scott"],
     correct: 1
   },

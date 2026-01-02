@@ -7,62 +7,63 @@ if (!theme || !quizzes[theme]) {
 }
 
 const selectedQuiz = quizzes[theme];
-let currentQuestionIndex = 0;
-let selectedAnswerIndex = null;
-let userAnswers = [];
+let userAnswers = new Array(selectedQuiz.length).fill(null);
 
-const questionEl = document.getElementById("question");
-const optionsEl = document.getElementById("options");
-const counterEl = document.getElementById("counter");
+const quizEl = document.getElementById("quiz");
 const validateBtn = document.getElementById("validateBtn");
 
-function showQuestion() {
-  selectedAnswerIndex = null;
-  optionsEl.innerHTML = "";
+// === Ici on remplace tout l'ancien showQuestion() ===
+selectedQuiz.forEach((q, questionIndex) => {
+  const questionCard = document.createElement("div");
+  questionCard.classList.add("question-card");
 
-  const q = selectedQuiz[currentQuestionIndex];
+  questionCard.innerHTML = `
+    <div class="question-header">
+      <span class="question-counter">
+        Question ${questionIndex + 1} / ${selectedQuiz.length}
+      </span>
+    </div>
 
-  counterEl.textContent = `Question ${currentQuestionIndex + 1} / ${selectedQuiz.length}`;
-  questionEl.textContent = q.question;
+    <div class="question-text">
+      ${q.question}
+    </div>
 
-  q.answers.forEach((answer, index) => {
-    const div = document.createElement("div");
-    div.classList.add("option-card");
-    div.textContent = answer;
+    <div class="answers"></div>
+  `;
 
-    div.addEventListener("click", () => {
-      document.querySelectorAll(".option-card")
+  const answersEl = questionCard.querySelector(".answers");
+
+  q.answers.forEach((answer, answerIndex) => {
+    const answerCard = document.createElement("div");
+    answerCard.classList.add("answer-card");
+    answerCard.textContent = answer;
+
+    answerCard.addEventListener("click", () => {
+      answersEl.querySelectorAll(".answer-card")
         .forEach(el => el.classList.remove("selected"));
 
-      div.classList.add("selected");
-      selectedAnswerIndex = index;
+      answerCard.classList.add("selected");
+      userAnswers[questionIndex] = answerIndex;
     });
 
-    optionsEl.appendChild(div);
+    answersEl.appendChild(answerCard);
   });
-}
 
-validateBtn.addEventListener("click", () => {
-  if (selectedAnswerIndex === null) {
-    alert("Choisis une réponse !");
-    return;
-  }
-
-  userAnswers.push(selectedAnswerIndex);
-  currentQuestionIndex++;
-
-  if (currentQuestionIndex < selectedQuiz.length) {
-    showQuestion();
-  } else {
-    localStorage.setItem("quizResults", JSON.stringify({
-      theme,
-      questions: selectedQuiz,
-      userAnswers
-    }));
-
-    window.location.href = "resultats.html";
-  }
+  quizEl.appendChild(questionCard);
 });
 
 
-showQuestion();
+validateBtn.addEventListener("click", () => {
+  if (userAnswers.includes(null)) {
+    alert("Réponds à toutes les questions !");
+    return;
+  }
+
+  localStorage.setItem("quizResults", JSON.stringify({
+    theme,
+    questions: selectedQuiz,
+    userAnswers
+  }));
+
+  window.location.href = "resultats.html";
+});

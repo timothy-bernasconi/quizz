@@ -1,171 +1,102 @@
+
 body {
-    background-color: #FFCDB2;
-    font-size: 2rem;
+    background-color: #0898e0f2;
     margin: 0;
+    font-family: sans-serif;
 }
 
-/* header {
-    display: flex;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background-color: #7c3aed;
-    height: 50px;
-
-
-}
-
-ul {
-    list-style: none;
-}
-
-li img {
-    height: 35px;
-    width: auto;
-    position: relative;
-    top: -25px;
-    left: -30px;
- 
-} */
 #quiz {
-    border: 3px solid rgb(255, 255, 255);
-    padding: 10px 20px;
-    position: relative;
-    left: 0;
-    top: 50px;
-    margin: 10px;
-    background-color: #FFB4A2;
-    border-radius: 10px;
-  
-    
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
 }
 
-#question {
-    color: #ef4e31;
-    display: flex;
-    justify-content: center;
+
+.question-card {
+    background-color: #1a1568;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.question-header {
     font-size: 0.9em;
     font-weight: 600;
-    text-align: center;    
+    color: #fff;
+    margin-bottom: 0.75rem;
 }
 
-#options {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-    font-size: 0.65em;
-    margin-bottom: 15px;
+.question-text {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+    text-align: center;
 }
 
-.next {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+.answers {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 10px;
 }
+
+
+.answer-card {
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: rgba(253, 253, 255, 0.133);
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.answer-card:hover {
+    background-color: #dde6f5;
+    color: #000;
+}
+
+.answer-card.selected {
+    background-color: #056fa6;
+    color: white;
+}
+
 
 #validateBtn {
-    height: 25px;
-    width: auto;
+    display: block;
+    margin: 3rem auto;
+    padding: 0.5rem 1.5rem;
     background-color: #ffffff00;
     border: none;
     color: #ff1004;
-    font-size: 0.6em;
     font-weight: 600;
-    margin-top: 3rem;
     cursor: pointer;
-    
-}
-
-.option-card {
-    height: auto;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 10px;
-    display: inline-block;
-    transition: all 0.2s;
-    background-color: #f9f9f9;
-    
-}
-.option-card:hover {
-  background-color: #dde6f5;
-}
-.option-card.selected {
-  background-color: #ef4e31;
-  color: white;
-  border-color: rgb(255, 255, 255);
-}
-
-.counter {
-  color: #ffffff;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.arrow {
-    position: relative;
-    top: 0;
-    left: 5px;
-}
- a {
-    color: #ef4e31;
- }
-
-@media screen and (max-width: 479px) {
-    #options {
-        display: flex;
-        flex-direction: column; 
-        gap: 10px;
-    }
-    .option-card {
-        width: 100%;
-        font-size: 0.6em;
-    }
 }
 
 
-@media screen and (min-width: 480px) {
-    #options {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;   
-        justify-content: center;
-        gap: 12px;
-    }
-    .option-card {
-        flex: 1 1 45%;
-        font-size: 0.65em;
-    }
-}
 
-
-@media screen and (min-width: 600px) {
-    .option-card {
-        flex: 1 1 40%;
-        font-size: 0.7em;
-    }
-}
 
 @media screen and (min-width: 768px) {
-    .option-card {
-        flex: 1 1 22%; 
-        font-size: 0.75em;
-    }
-    #quiz {
-        max-width: 800px;
-        margin: 50px auto;
-        padding: 20px 30px;
+    .answers {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px; 
     }
 }
 
 
 @media screen and (min-width: 1024px) {
-    .option-card {
-        flex: 1 1 22%;
-        font-size: 0.75em;
+    .answer-card {
+        font-size: 1em;
+        margin-top: 25px;
+        
     }
+
+    .question-card {
+        height: 200px;
+}
 }
