@@ -48,6 +48,57 @@ const quizGeographie = [
     question: "Quel est le plus long fleuve d’Afrique ?",
     answers: ["Le Nil", "Le Congo", "Le Zambèze", "Le Niger"],
     correct: 0
+  },
+
+  {
+    question: "Quel pays est traversé par le fleuve Amazone ?",
+    answers: ["Pérou", "Colombie", "Brésil", "Bolivie"],
+    correct: 2
+  },
+  {
+    question: "Quelle est la capitale de la Norvège ?",
+    answers: ["Stockholm", "Helsinki", "Oslo", "Copenhague"],
+    correct: 2
+  },
+  {
+    question: "Quel désert est le plus vaste du monde (chaud) ?",
+    answers: ["Gobi", "Sahara", "Kalahari", "Atacama"],
+    correct: 1
+  },
+  {
+    question: "Quelle chaîne de montagnes sépare l’Europe et l’Asie ?",
+    answers: ["Alpes", "Himalaya", "Oural", "Caucase"],
+    correct: 2
+  },
+  {
+    question: "Quel pays possède le plus grand nombre d’habitants en 2025 ?",
+    answers: ["Chine", "Inde", "États-Unis", "Indonésie"],
+    correct: 1
+  },
+  {
+    question: "Quelle est la capitale de l’Argentine ?",
+    answers: ["Lima", "Santiago", "Buenos Aires", "Montevideo"],
+    correct: 2
+  },
+  {
+    question: "Quel pays n’est PAS en Afrique ?",
+    answers: ["Maroc", "Égypte", "Turquie", "Nigeria"],
+    correct: 2
+  },
+  {
+    question: "Quel océan borde la côte ouest de l’Afrique ?",
+    answers: ["Pacifique", "Indien", "Arctique", "Atlantique"],
+    correct: 3
+  },
+  {
+    question: "Quel pays est une île ?",
+    answers: ["Portugal", "Italie", "Islande", "Belgique"],
+    correct: 2
+  },
+  {
+    question: "Quel est le plus long fleuve d’Europe ?",
+    answers: ["Danube", "Volga", "Rhin", "Loire"],
+    correct: 1
   }
 ];
 
@@ -102,8 +153,59 @@ const quizHistoire = [
     question: "Quel mur symbolisait la division de l’Allemagne ?",
     answers: ["Le Mur de Jérusalem", "Le Mur de Berlin", "Le Mur de Rome", "Le Mur de Chine"],
     correct: 1
+  },
+  {
+    question: "En quelle année a commencé la Révolution française ?",
+    answers: ["1789", "1792", "1776", "1815"],
+    correct: 0
+  },
+  {
+    question: "Qui était le premier empereur romain ?",
+    answers: ["Jules César", "Auguste", "Néron", "Trajan"],
+    correct: 1
+  },
+  {
+    question: "Quel mur est tombé en 1989 ?",
+    answers: ["Mur de Berlin", "Mur de Chine", "Mur d’Hadrien", "Mur de Varsovie"],
+    correct: 0
+  },
+  {
+    question: "Quel pays était dirigé par Napoléon Bonaparte ?",
+    answers: ["Italie", "Espagne", "France", "Autriche"],
+    correct: 2
+  },
+  {
+    question: "Quelle guerre a opposé le Nord et le Sud des États-Unis ?",
+    answers: ["Première Guerre mondiale", "Guerre de Sécession", "Guerre froide", "Guerre du Vietnam"],
+    correct: 1
+  },
+  {
+    question: "Quelle civilisation a construit les pyramides de Gizeh ?",
+    answers: ["Mayas", "Aztèques", "Égyptiens", "Romains"],
+    correct: 2
+  },
+  {
+    question: "Quel roi français était surnommé le Roi Soleil ?",
+    answers: ["Louis XIII", "Louis XIV", "Louis XV", "François Ier"],
+    correct: 1
+  },
+  {
+    question: "Quelle période précède le Moyen Âge ?",
+    answers: ["Antiquité", "Renaissance", "Temps modernes", "Préhistoire"],
+    correct: 0
+  },
+  {
+    question: "Qui a découvert l’Amérique en 1492 ?",
+    answers: ["Marco Polo", "Vasco de Gama", "Christophe Colomb", "Magellan"],
+    correct: 2
+  },
+  {
+    question: "Quel conflit mondial a eu lieu de 1939 à 1945 ?",
+    answers: ["Première Guerre mondiale", "Guerre froide", "Seconde Guerre mondiale", "Guerre de Corée"],
+    correct: 2
   }
 ];
+
 
 
 const quizPolitique = [
@@ -156,6 +258,57 @@ const quizPolitique = [
     question: "Quel chef d’État est élu au suffrage universel direct en France ?",
     answers: ["Le Premier ministre", "Le Président", "Le Sénateur", "Le Maire"],
     correct: 1
+  },
+
+    {
+    question: "Quel est le rôle principal du Président de la République française ?",
+    answers: ["Légiférer", "Diriger le gouvernement", "Représenter l’État", "Rendre la justice"],
+    correct: 2
+  },
+  {
+    question: "Quel organe vote les lois en France ?",
+    answers: ["Le Conseil constitutionnel", "Le Sénat uniquement", "Le Parlement", "Le gouvernement"],
+    correct: 2
+  },
+  {
+    question: "Combien de mandats consécutifs maximum peut exercer un président français ?",
+    answers: ["1", "2", "3", "Illimité"],
+    correct: 1
+  },
+  {
+    question: "Quelle organisation regroupe les pays européens ?",
+    answers: ["OTAN", "ONU", "Union européenne", "G7"],
+    correct: 2
+  },
+  {
+    question: "Quel est le rôle du Premier ministre en France ?",
+    answers: ["Diriger l’armée", "Diriger le gouvernement", "Voter les lois", "Contrôler la justice"],
+    correct: 1
+  },
+  {
+    question: "Quel pays est une république fédérale ?",
+    answers: ["France", "Royaume-Uni", "Allemagne", "Italie"],
+    correct: 2
+  },
+  {
+    question: "Quel est le siège de l’ONU ?",
+    answers: ["Genève", "Paris", "New York", "Bruxelles"],
+    correct: 2
+  },
+  {
+    question: "Quel droit permet de choisir ses représentants ?",
+    answers: ["Droit de grève", "Droit de vote", "Liberté d’expression", "Droit d’asile"],
+    correct: 1
+  },
+  {
+    question: "Quelle institution contrôle la conformité des lois en France ?",
+    answers: ["Assemblée nationale", "Sénat", "Conseil constitutionnel", "Cour de cassation"],
+    correct: 2
+  },
+  {
+    question: "Quel régime politique combine élections et libertés fondamentales ?",
+    answers: ["Dictature", "Monarchie absolue", "Démocratie", "Empire"],
+    correct: 2
   }
 ];
 
@@ -210,8 +363,60 @@ const quizSport = [
     question: "Où se jouent les finales de Wimbledon ?",
     answers: ["Roland-Garros", "Melbourne", "Flushing Meadows", "Londres"],
     correct: 3
+  },
+
+  {
+    question: "Combien de joueurs composent une équipe de football sur le terrain ?",
+    answers: ["9", "10", "11", "12"],
+    correct: 2
+  },
+  {
+    question: "Quel pays a remporté la Coupe du monde 2018 ?",
+    answers: ["Brésil", "Allemagne", "France", "Argentine"],
+    correct: 2
+  },
+  {
+    question: "Dans quel sport utilise-t-on une raquette ?",
+    answers: ["Football", "Tennis", "Rugby", "Boxe"],
+    correct: 1
+  },
+  {
+    question: "Combien de points vaut un panier à trois points au basket ?",
+    answers: ["1", "2", "3", "4"],
+    correct: 2
+  },
+  {
+    question: "Quel sport se pratique sur un ring ?",
+    answers: ["Judo", "Boxe", "Escrime", "Lutte"],
+    correct: 1
+  },
+  {
+    question: "Quel pays est à l’origine des Jeux olympiques antiques ?",
+    answers: ["Italie", "Grèce", "Égypte", "France"],
+    correct: 1
+  },
+  {
+    question: "Quel sport utilise un ballon ovale ?",
+    answers: ["Football", "Handball", "Rugby", "Basket"],
+    correct: 2
+  },
+  {
+    question: "Combien de sets gagnants faut-il pour gagner un match de tennis masculin en Grand Chelem ?",
+    answers: ["2", "3", "4", "5"],
+    correct: 1
+  },
+  {
+    question: "Quel sport est associé à Roland-Garros ?",
+    answers: ["Football", "Tennis", "Golf", "Cyclisme"],
+    correct: 1
+  },
+  {
+    question: "Quel pays organise le Tour de France ?",
+    answers: ["Italie", "Belgique", "France", "Espagne"],
+    correct: 2
   }
 ];
+
 
 const quizLitterature = [
   {
@@ -263,8 +468,60 @@ const quizLitterature = [
     question: "Quel livre raconte l’histoire de Jean Valjean ?",
     answers: ["Germinal", "Les Misérables", "Bel-Ami", "Le Père Goriot"],
     correct: 1
+  },
+
+  {
+    question: "Qui a écrit Les Misérables ?",
+    answers: ["Émile Zola", "Victor Hugo", "Balzac", "Molière"],
+    correct: 1
+  },
+  {
+    question: "Quel est le genre de Roméo et Juliette ?",
+    answers: ["Roman", "Poésie", "Théâtre", "Essai"],
+    correct: 2
+  },
+  {
+    question: "Qui est l’auteur de Harry Potter ?",
+    answers: ["J.R.R. Tolkien", "J.K. Rowling", "George R.R. Martin", "Philip Pullman"],
+    correct: 1
+  },
+  {
+    question: "Le Petit Prince est une œuvre de ?",
+    answers: ["Jules Verne", "Antoine de Saint-Exupéry", "Camus", "Prévert"],
+    correct: 1
+  },
+  {
+    question: "Quel écrivain a créé Sherlock Holmes ?",
+    answers: ["Agatha Christie", "Arthur Conan Doyle", "Edgar Allan Poe", "Stephen King"],
+    correct: 1
+  },
+  {
+    question: "Quel est le genre principal de 1984 de George Orwell ?",
+    answers: ["Fantasy", "Science-fiction", "Dystopie", "Policier"],
+    correct: 2
+  },
+  {
+    question: "Qui a écrit L’Étranger ?",
+    answers: ["Sartre", "Camus", "Beckett", "Ionesco"],
+    correct: 1
+  },
+  {
+    question: "Don Quichotte est une œuvre de ?",
+    answers: ["Cervantès", "Garcia Marquez", "Lorca", "Borges"],
+    correct: 0
+  },
+  {
+    question: "Quel mouvement littéraire est associé à Victor Hugo ?",
+    answers: ["Réalisme", "Romantisme", "Naturalisme", "Symbolisme"],
+    correct: 1
+  },
+  {
+    question: "Quel écrivain français a écrit Germinal ?",
+    answers: ["Zola", "Hugo", "Maupassant", "Balzac"],
+    correct: 0
   }
 ];
+
 
 const quizCinema = [
   {
@@ -316,6 +573,57 @@ const quizCinema = [
     question: "Dans quel pays se déroule principalement le film « Amélie Poulain » ?",
     answers: ["Belgique", "Canada", "France", "Italie"],
     correct: 2
+  }, 
+
+  {
+    question: "Qui a réalisé Titanic ?",
+    answers: ["Steven Spielberg", "James Cameron", "Christopher Nolan", "Ridley Scott"],
+    correct: 1
+  },
+  {
+    question: "Quel film met en scène un parc de dinosaures ?",
+    answers: ["King Kong", "Jurassic Park", "Avatar", "Godzilla"],
+    correct: 1
+  },
+  {
+    question: "Quel acteur incarne Iron Man ?",
+    answers: ["Chris Evans", "Chris Hemsworth", "Robert Downey Jr.", "Mark Ruffalo"],
+    correct: 2
+  },
+  {
+    question: "Quel film a pour slogan « Que la Force soit avec toi » ?",
+    answers: ["Star Wars", "Star Trek", "Dune", "Matrix"],
+    correct: 0
+  },
+  {
+    question: "Quel genre est le film Inception ?",
+    answers: ["Comédie", "Drame", "Science-fiction", "Western"],
+    correct: 2
+  },
+  {
+    question: "Quel réalisateur est connu pour ses films d’animation japonais ?",
+    answers: ["Kurosawa", "Miyazaki", "Oshii", "Kitano"],
+    correct: 1
+  },
+  {
+    question: "Quel film raconte l’histoire de Forrest Gump ?",
+    answers: ["Cast Away", "Forrest Gump", "Big", "Philadelphia"],
+    correct: 1
+  },
+  {
+    question: "Quel film a remporté l’Oscar du meilleur film en 1994 ?",
+    answers: ["Pulp Fiction", "Forrest Gump", "The Shawshank Redemption", "Speed"],
+    correct: 1
+  },
+  {
+    question: "Quel personnage dit « I’ll be back » ?",
+    answers: ["Rambo", "Terminator", "Rocky", "Predator"],
+    correct: 1
+  },
+  {
+    question: "Quel film est une adaptation d’un roman de Stephen King ?",
+    answers: ["Shining", "Alien", "Se7en", "Fight Club"],
+    correct: 0
   }
 ];
 

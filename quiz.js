@@ -1,10 +1,30 @@
 const params = new URLSearchParams(window.location.search);
 const theme = params.get("theme");
 
+
 if (!theme || !quizzes[theme]) {
   alert("Thème invalide");
   window.location.href = "themes.html";
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const themeNames = {
+    geographie: "Quiz Géographie 🌍",
+    histoire: "Quiz Histoire 📜",
+    politique: "Quiz Politique 🏛️",
+    sport: "Quiz Sport ⚽",
+    litterature: "Quiz Littérature 📚",
+    cinema: "Quiz Cinéma 🎬"
+  };
+
+  const quizTitle = document.getElementById("quizTitle");
+  if (themeNames[theme] && quizTitle) {
+    quizTitle.textContent = themeNames[theme];
+    document.title = themeNames[theme];
+  }
+});
+
 
 const selectedQuiz = quizzes[theme];
 let userAnswers = new Array(selectedQuiz.length).fill(null);
@@ -12,7 +32,6 @@ let userAnswers = new Array(selectedQuiz.length).fill(null);
 const quizEl = document.getElementById("quiz");
 const validateBtn = document.getElementById("validateBtn");
 
-// === Ici on remplace tout l'ancien showQuestion() ===
 selectedQuiz.forEach((q, questionIndex) => {
   const questionCard = document.createElement("div");
   questionCard.classList.add("question-card");
