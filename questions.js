@@ -627,11 +627,216 @@ const quizCinema = [
   }
 ];
 
+const quizStars = [
+  
+  {
+    question: "Quel acteur incarne Iron Man dans le MCU ?",
+    answers: [
+      "Chris Evans",
+      "Robert Downey Jr.",
+      "Tom Holland",
+      "Chris Hemsworth"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quelle actrice joue Hermione Granger dans Harry Potter ?",
+    answers: [
+      "Emma Watson",
+      "Emma Stone",
+      "Keira Knightley",
+      "Natalie Portman"
+    ],
+    correct: 0
+  },
+  {
+    question: "Quel acteur est connu pour avoir joué Jack Sparrow ?",
+    answers: [
+      "Orlando Bloom",
+      "Johnny Depp",
+      "Leonardo DiCaprio",
+      "Brad Pitt"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quelle actrice a remporté un Oscar pour le film 'La La Land' ?",
+    answers: [
+      "Emma Stone",
+      "Jennifer Lawrence",
+      "Scarlett Johansson",
+      "Anne Hathaway"
+    ],
+    correct: 0
+  },
+  {
+    question: "Quel acteur incarne Neo dans la saga Matrix ?",
+    answers: [
+      "Keanu Reeves",
+      "Tom Cruise",
+      "Will Smith",
+      "Matt Damon"
+    ],
+    correct: 0
+  },
+  {
+    question: "Quel acteur a joué Wolverine dans la saga X-Men ?",
+    answers: [
+      "Hugh Jackman",
+      "Chris Pratt",
+      "Mark Ruffalo",
+      "Ryan Reynolds"
+    ],
+    correct: 0
+  },
+  {
+    question: "Quelle actrice joue Black Widow dans le MCU ?",
+    answers: [
+      "Elizabeth Olsen",
+      "Scarlett Johansson",
+      "Gal Gadot",
+      "Brie Larson"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quel acteur est la star de la saga Mission: Impossible ?",
+    answers: [
+      "Matt Damon",
+      "Tom Cruise",
+      "Brad Pitt",
+      "George Clooney"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quelle actrice incarne Wonder Woman au cinéma ?",
+    answers: [
+      "Gal Gadot",
+      "Zendaya",
+      "Margot Robbie",
+      "Emily Blunt"
+    ],
+    correct: 0
+  },
+  {
+    question: "Quel acteur joue Forrest Gump ?",
+    answers: [
+      "Tom Hanks",
+      "Robin Williams",
+      "Jim Carrey",
+      "Denzel Washington"
+    ],
+    correct: 0
+  },
+  {
+    question: "Quel acteur est connu pour le rôle du Joker dans 'The Dark Knight' ?",
+    answers: [
+      "Joaquin Phoenix",
+      "Jack Nicholson",
+      "Heath Ledger",
+      "Jared Leto"
+    ],
+    correct: 2
+  },
+  {
+    question: "Quelle actrice joue Katniss Everdeen dans Hunger Games ?",
+    answers: [
+      "Emma Stone",
+      "Jennifer Lawrence",
+      "Shailene Woodley",
+      "Natalie Portman"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quel acteur a incarné James Bond dans Casino Royale (2006) ?",
+    answers: [
+      "Pierce Brosnan",
+      "Daniel Craig",
+      "Sean Connery",
+      "Roger Moore"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quelle actrice joue Harley Quinn au cinéma ?",
+    answers: [
+      "Cara Delevingne",
+      "Margot Robbie",
+      "Scarlett Johansson",
+      "Ana de Armas"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quel acteur est la star du film Gladiator ?",
+    answers: [
+      "Russell Crowe",
+      "Gerard Butler",
+      "Joaquin Phoenix",
+      "Brad Pitt"
+    ],
+    correct: 0
+  },
+  {
+    question: "Quelle actrice a joué dans 'Titanic' aux côtés de Leonardo DiCaprio ?",
+    answers: [
+      "Kate Winslet",
+      "Nicole Kidman",
+      "Julia Roberts",
+      "Charlize Theron"
+    ],
+    correct: 0
+  },
+  {
+    question: "Quel acteur joue Captain Jack dans Titanic ?",
+    answers: [
+      "Brad Pitt",
+      "Leonardo DiCaprio",
+      "Matt Damon",
+      "Johnny Depp"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quelle actrice incarne Rey dans la nouvelle trilogie Star Wars ?",
+    answers: [
+      "Daisy Ridley",
+      "Felicity Jones",
+      "Natalie Portman",
+      "Keira Knightley"
+    ],
+    correct: 0
+  },
+  {
+    question: "Quel acteur joue Deadpool ?",
+    answers: [
+      "Ryan Gosling",
+      "Ryan Reynolds",
+      "Chris Evans",
+      "Paul Rudd"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quelle actrice a remporté l’Oscar pour le film 'Black Swan' ?",
+    answers: [
+      "Mila Kunis",
+      "Natalie Portman",
+      "Anne Hathaway",
+      "Rachel McAdams"
+    ],
+    correct: 1
+  }
+];
+
 const quizzes = {
   geographie: quizGeographie,
   histoire: quizHistoire,
   sport: quizSport,
   politique: quizPolitique,
   litterature: quizLitterature,
-  cinema: quizCinema
+  cinema: quizCinema,
+  stars : quizStars
 };

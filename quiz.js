@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     politique: "Quiz Politique 🏛️",
     sport: "Quiz Sport ⚽",
     litterature: "Quiz Littérature 📚",
-    cinema: "Quiz Cinéma 🎬"
+    cinema: "Quiz Cinéma 🎬",
+    stars: "Quiz Stars ⭐"
   };
 
   const quizTitle = document.getElementById("quizTitle");
