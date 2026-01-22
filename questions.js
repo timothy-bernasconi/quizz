@@ -831,6 +831,216 @@ const quizStars = [
   }
 ];
 
+const quizFootball = [
+  {
+    question: "Quel joueur a remporté le plus de Ballons d'Or ?",
+    answers: [
+      "Cristiano Ronaldo",
+      "Lionel Messi",
+      "Michel Platini",
+      "Zinedine Zidane"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quelle nation a remporté la Coupe du Monde 2018 ?",
+    answers: [
+      "Brésil",
+      "Allemagne",
+      "France",
+      "Argentine"
+    ],
+    correct: 2
+  },
+  {
+    question: "Quel club a remporté le plus de Ligues des Champions ?",
+    answers: [
+      "AC Milan",
+      "FC Barcelone",
+      "Liverpool",
+      "Real Madrid"
+    ],
+    correct: 3
+  },
+  {
+    question: "Quel joueur est surnommé 'CR7' ?",
+    answers: [
+      "Cristiano Ronaldo",
+      "Carlos Tevez",
+      "Ronaldinho",
+      "Ronaldo Nazário"
+    ],
+    correct: 0
+  },
+  {
+    question: "Dans quel club Lionel Messi a-t-il joué la majorité de sa carrière ?",
+    answers: [
+      "Paris Saint-Germain",
+      "FC Barcelone",
+      "Inter Miami",
+      "Newell's Old Boys"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quel pays a remporté la Coupe du Monde 2022 ?",
+    answers: [
+      "France",
+      "Brésil",
+      "Argentine",
+      "Croatie"
+    ],
+    correct: 2
+  },
+  {
+    question: "Quel joueur français a marqué en finale de la Coupe du Monde 1998 ?",
+    answers: [
+      "Thierry Henry",
+      "Didier Drogba",
+      "Zinedine Zidane",
+      "David Trezeguet"
+    ],
+    correct: 2
+  },
+  {
+    question: "Quel club est surnommé 'Les Reds' ?",
+    answers: [
+      "Manchester United",
+      "Liverpool",
+      "Arsenal",
+      "Bayern Munich"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quel joueur est connu pour la 'Main de Dieu' ?",
+    answers: [
+      "Pelé",
+      "Diego Maradona",
+      "Ronaldinho",
+      "George Best"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quel club français a remporté la Ligue des Champions en 1993 ?",
+    answers: [
+      "AS Monaco",
+      "Paris Saint-Germain",
+      "Olympique Lyonnais",
+      "Olympique de Marseille"
+    ],
+    correct: 3
+  },
+  {
+    question: "Quel joueur est le meilleur buteur de l’histoire de l’équipe de France ?",
+    answers: [
+      "Thierry Henry",
+      "Antoine Griezmann",
+      "Kylian Mbappé",
+      "Olivier Giroud"
+    ],
+    correct: 3
+  },
+  {
+    question: "Dans quel pays se trouve le club du Bayern Munich ?",
+    answers: [
+      "Autriche",
+      "Suisse",
+      "Allemagne",
+      "Pays-Bas"
+    ],
+    correct: 2
+  },
+  {
+    question: "Quel joueur a remporté la Coupe du Monde 2014 avec l’Allemagne ?",
+    answers: [
+      "Miroslav Klose",
+      "Thomas Müller",
+      "Mario Götze",
+      "Toni Kroos"
+    ],
+    correct: 2
+  },
+  {
+    question: "Quel club est surnommé 'La Vieille Dame' ?",
+    answers: [
+      "AC Milan",
+      "Inter Milan",
+      "Juventus",
+      "AS Roma"
+    ],
+    correct: 2
+  },
+  {
+    question: "Quel joueur a porté le numéro 10 au PSG pendant plusieurs saisons ?",
+    answers: [
+      "Neymar",
+      "Mbappé",
+      "Ibrahimović",
+      "Ronaldinho"
+    ],
+    correct: 0
+  },
+  {
+    question: "Quel pays a remporté le plus de Coupes du Monde ?",
+    answers: [
+      "Allemagne",
+      "Italie",
+      "Argentine",
+      "Brésil"
+    ],
+    correct: 3
+  },
+  {
+    question: "Quel joueur est surnommé 'El Fenomeno' ?",
+    answers: [
+      "Ronaldinho",
+      "Ronaldo Nazário",
+      "Cristiano Ronaldo",
+      "Luis Suarez"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quel club est rival historique du FC Barcelone ?",
+    answers: [
+      "Atlético Madrid",
+      "Valence",
+      "Real Madrid",
+      "Séville"
+    ],
+    correct: 2
+  },
+  {
+    question: "Quel gardien est considéré comme une légende italienne ?",
+    answers: [
+      "Iker Casillas",
+      "Gianluigi Buffon",
+      "Manuel Neuer",
+      "Peter Schmeichel"
+    ],
+    correct: 1
+  },
+  {
+    question: "Quel joueur français joue au Real Madrid depuis 2023 ?",
+    answers: [
+      "Antoine Griezmann",
+      "Karim Benzema",
+      "Kylian Mbappé",
+      "Ousmane Dembélé"
+    ],
+    correct: 2
+  }
+];
+
+
+
+
+
+
+
+
 const quizzes = {
   geographie: quizGeographie,
   histoire: quizHistoire,
@@ -838,5 +1048,6 @@ const quizzes = {
   politique: quizPolitique,
   litterature: quizLitterature,
   cinema: quizCinema,
-  stars : quizStars
+  stars : quizStars,
+  foot : quizFootball
 };
